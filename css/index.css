@@ -1,0 +1,44 @@
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.card p{
+    margin-top: -10px;
+    /* display: inline-block; */
+}
+.card{
+    display: inline-block; 
+}
+/* .card{
+    margin-left: 20px;
+    margin-right: 5px;
+} */
+
+/* .card{
+    background-color: aquamarine;
+    padding: 20px;
+    display: inline-flex;
+}
+
+.row{
+    display: inline-flex;
+}
+
+.card img{
+    display: inline-flex;
+    height: 18rem;
+    width: 14rem;
+    margin-right: auto !important;
+    margin-left: 0 !important;
+}
+.card .card-body{
+    /* display: inline-flex; */
+    /* margin-left: auto !important;
+    margin-right: 0 !important;
+/* } */ 
