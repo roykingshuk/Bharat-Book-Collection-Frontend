@@ -21,6 +21,7 @@ $(document).ready(function () {
     var input = $('.validate-input .input100');
 
     $('.validate-form').on('submit',function(e){
+        $("#login-btn").text("Logging in...");
         e.preventDefault();
         var check = true;
 
@@ -30,8 +31,10 @@ $(document).ready(function () {
                 check=false;
             }
         }
-        if (check == false)
+        if (check == false) {
+            $("#login-btn").text("Login");
             return false;
+        }
 
         $.ajax({
             url: 'https://bbcbackend-1-q7585685.deta.app/login/',
@@ -46,9 +49,10 @@ $(document).ready(function () {
                 Object.keys(result).forEach(function(key) {
                     Cookies.set(key, result[key]);
                 });
-                window.location.href = "dash.html";
+                window.location.href = "index.html";
             },
             error: function(response) {
+                $("#login-btn").text("Login");
                 alert(response.responseJSON.detail);
             }
         });
