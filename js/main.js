@@ -21,8 +21,13 @@ $(document).ready(function () {
     var input = $('.validate-input .input100');
 
     $('.validate-form').on('submit',function(e){
-        $("#login-btn").text("Logging in...");
         e.preventDefault();
+        let loginLoading = `
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Logging in...
+        `;
+        $("#login-btn").html(loginLoading);
+
         var check = true;
 
         for(var i=0; i<input.length; i++) {
@@ -53,7 +58,11 @@ $(document).ready(function () {
             },
             error: function(response) {
                 $("#login-btn").text("Login");
-                alert(response.responseJSON.detail);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Authorization Failed!',
+                    text: response.responseJSON.detail
+                });
             }
         });
     });
@@ -67,10 +76,23 @@ $(document).ready(function () {
 
     $('.signup-form').on("submit", function(e){
         e.preventDefault();
+
+        let signupLoading = `
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Signing up...
+        `;
+        $("#signupBtn").html(signupLoading);
+
         if ($('#password').val() != $('#confirm-password').val()) {
-            alert("Password and Confirm Password field does not match!");
+            $("#signupBtn").text("Sign Up");
+            Swal.fire({
+                icon: 'error',
+                title: 'Signup Failed',
+                text: "Password and Confirm Password fields does not match!"
+            });
             return false;
         }
+
         $.ajax({
             url: 'https://bbcbackend-1-q7585685.deta.app/signup/',
             type: 'POST',
@@ -84,11 +106,27 @@ $(document).ready(function () {
             }),
             contentType: 'application/json',
             success: function(response) {
-                alert(response[0].message);
-                window.location.href = "login.html";
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Signup Successful',
+                    text: response[0].message,
+                    showCancelButton: true,
+                    confirmButtonText: 'Go to Login'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = "login.html";
+                    } else {
+                        $("#signupBtn").text("Sign Up");
+                    }
+                });
             },
             error: function(response) {
-                alert(response.responseJSON.detail);
+                $("#signupBtn").text("Sign Up");
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Signup Failed',
+                    text: response.responseJSON.detail
+                });
             }
         });
     });

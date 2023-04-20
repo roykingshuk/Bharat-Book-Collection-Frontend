@@ -54,7 +54,11 @@ $(document).ready(function () {
         });
     },
     error: function (errorMessage) {
-        alert(errorMessage.responseJSON["detail"]);
+        Swal.fire({
+            icon: 'error',
+            title: 'Page Load Failed!',
+            text: errorMessage.responseJSON["detail"]
+        });
     },
   });
 });
