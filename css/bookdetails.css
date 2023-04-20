@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Roboto+Condensed:ital,wght@0,400;1,300&display=swap');
+
+/*
+*{
+        font-family: 'Playfair Display', serif;
+
+    font-family: 'Roboto Condensed', sans-serif;
+}*/
+
+* {
+    overflow: visible;
+}
+
+.body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.flex-container {
+    /*    text-align: center;*/
+    width: 79%;
+    height: 80vh;
+    display: flex;
+}
+
+.content {
+    margin: 10px;
+    padding: 20px;
+}
+
+.content .book-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+}
+
+.content p {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.image {
+    /* max-width: 478px; */
+    margin-left: 1vw;
+    margin-top: 10px;
+}
+
+.flex-container img {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+}
+
+.flex-container img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 50px 150px rgba(0, 0, 0, 0.15);
+}
+
+.flex-child {
+    /*This is to style the content of the current book */
+    max-width: 646px;
+    flex: 1;
+}
+
+.content {
+    margin-left: 30px;
+}
+
+.flex-child:first-child {
+    background-color: #A6D0DD;
+    max-width: 428px;
+    max-height: 504px;
+}
+
+section {
+    margin-top: 10em;
+    margin: 5rem;
+}
+
+.row {
+    overflow: visible !important;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
