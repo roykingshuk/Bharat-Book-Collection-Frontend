@@ -43,26 +43,9 @@ $(document).ready(function () {
 
         $(".row").append(card);
       });
-
-      //   $.each(book_recommendation, function (index, value) {
-      //     console.log("response here");
-      //     console.log(index);
-      //     console.log(value);
-
-      //     var title = value["Book-Title"];
-      //     var author = value["Book-Author"];
-      //     var isbn = value["ISBN"];
-      //     var img_url = value["Image-URL-L"];
-      //     var publisher = value["Publisher"];
-      //     $(
-      //       ".carousel .container .row .card-container .card .card-img-top .img-fluid"
-      //     ).attr("src", img_url);
-
-      //     // console.log(title, author);
-      //   });
     },
     error: function (errorMessage) {
-      alert(errorMessage.responseJSON["detail"]);
+      console.log(errorMessage);
     },
   });
 });
