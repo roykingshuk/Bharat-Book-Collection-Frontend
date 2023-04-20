@@ -32,7 +32,7 @@ $(document).ready(function () {
     $.ajax({
         url: "https://bbc-backend.onrender.com/get-top-books/",
         type: "GET",
-        data: { perPage: -1 },
+        data: { perPage: 12 },
         contentType: "applications/json",
         success: function (response) {
         $.each(response, function (index, value) {
