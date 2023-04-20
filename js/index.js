@@ -36,6 +36,7 @@ $(document).ready(function () {
         contentType: "applications/json",
         success: function (response) {
         $.each(response, function (index, value) {
+            stopLoader();
             var bookTitle = value["Book-Title"];
             var img_url = value["Image-URL-L"];
             var rating = value["Average Ratings"].toFixed(2);
