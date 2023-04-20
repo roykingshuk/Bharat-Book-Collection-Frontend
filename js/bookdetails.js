@@ -7,8 +7,7 @@ var isbnno = $.urlParam('isbn');
 
 $(document).ready(function () {
   $.ajax({
-    // url: "https://bbc-backend.onrender.com/get-book-details/",
-    url: "http://localhost:8000/get-book-details",
+    url: "https://bbc-backend.onrender.com/get-book-details/",
     type: "GET",
     data: { isbn: isbnno },
     contentType: "application/json",
