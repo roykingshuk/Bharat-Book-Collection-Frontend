@@ -1,7 +1,7 @@
 import Cookies from '../vendor/jquery/js.cookie.min.mjs';
 
 $(document).ready(function () {
-
+    stopLoader();
     /*==================================================================
     [ Focus Contact2 ]*/
     $('.input100').each(function(){
