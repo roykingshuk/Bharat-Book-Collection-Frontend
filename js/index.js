@@ -32,7 +32,7 @@ $(document).ready(function () {
     $.ajax({
         url: "https://bbc-backend.onrender.com/get-top-books/",
         type: "GET",
-        data: { perPage: 12 },
+        data: { perPage: -1 },
         contentType: "applications/json",
         success: function (response) {
         $.each(response, function (index, value) {
@@ -54,7 +54,11 @@ $(document).ready(function () {
         });
     },
     error: function (errorMessage) {
-        alert(errorMessage.responseJSON["detail"]);
+        Swal.fire({
+            icon: 'error',
+            title: 'Page Load Failed!',
+            text: errorMessage.responseJSON["detail"]
+        });
     },
   });
 });
