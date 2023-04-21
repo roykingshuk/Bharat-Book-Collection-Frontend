@@ -1,210 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="images/icons/icon.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/pageLoader.css">
     <link rel="stylesheet" href="css/about.css" />
     <script src="https://kit.fontawesome.com/4085a96a69.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <title>Our Team</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="book-loader">
-      <div class="d-flex align-items-center">
-        <div class="book">
-          <div class="book__pg-shadow"></div>
-          <div class="book__pg"></div>
-          <div class="book__pg book__pg--2"></div>
-          <div class="book__pg book__pg--3"></div>
-          <div class="book__pg book__pg--4"></div>
-          <div class="book__pg book__pg--5"></div>
+        <div class="d-flex align-items-center">
+            <div class="book">
+                <div class="book__pg-shadow"></div>
+                <div class="book__pg"></div>
+                <div class="book__pg book__pg--2"></div>
+                <div class="book__pg book__pg--3"></div>
+                <div class="book__pg book__pg--4"></div>
+                <div class="book__pg book__pg--5"></div>
+            </div>
         </div>
-      </div>
+    </div>
+    <div class="header">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand font-weight-bold text-capitalize" href="index.html">
+                    Bharat Book Collection
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">Contributors</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav mb-2 mb-lg-0 ms-auto d-none" id="userLog">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false"></a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#" id="logout">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button class="btn btn-outline-success d-none" onclick="window.location.href='signup.html';"
+                        style="width: 8rem; margin-right: 10px;" id="signupBtn">
+                        Sign Up
+                    </button>
+                    <button class="btn btn-outline-success d-none" onclick="window.location.href='login.html';"
+                        style="width: 8rem" id="loginBtn">
+                        Log In
+                    </button>
+                </div>
+            </div>
+        </nav>
     </div>
     <div class="responsive-container-block container">
-      <p class="text-blk team-head-text">Our Team</p>
-      <div class="responsive-container-block">
-        <div
-          class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container"
-        >
-          <div class="card">
-            <div class="team-image-wrapper">
-              <img
-                class="team-member-image"
-                src="https://media.licdn.com/dms/image/C4E03AQEw73T6I4cmxQ/profile-displayphoto-shrink_800_800/0/1633274428039?e=1687392000&v=beta&t=PsRSVszmyvICnx9B5QQDHGnCMr4hcBKzimun41G60tU"
-              />
+        <p class="text-blk team-head-text">Our Team</p>
+        <div class="responsive-container-block">
+            <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+                <div class="card">
+                    <div class="team-image-wrapper">
+                        <img class="team-member-image"
+                            src="https://media.licdn.com/dms/image/C4E03AQEw73T6I4cmxQ/profile-displayphoto-shrink_800_800/0/1633274428039?e=1687392000&v=beta&t=PsRSVszmyvICnx9B5QQDHGnCMr4hcBKzimun41G60tU" />
+                    </div>
+                    <p class="text-blk name">Kingshuk Roy</p>
+                    <p class="text-blk position">CEO</p>
+                    <p class="text-blk feature-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/kingshuk-roy-2001/" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/roykingshuk" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <p class="text-blk name">Kingshuk Roy</p>
-            <p class="text-blk position">CEO</p>
-            <p class="text-blk feature-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <div class="social-icons">
-              <a
-                href="https://www.linkedin.com/in/kingshuk-roy-2001/"
-                target="_blank"
-              >
-                <i class="fa-brands fa-linkedin"></i>
-              </a>
-              <a href="https://github.com/roykingshuk" target="_blank">
-                <i class="fa-brands fa-github"></i>
-              </a>
+            <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+                <div class="card">
+                    <div class="team-image-wrapper">
+                        <img class="team-member-image"
+                            src="https://media.licdn.com/dms/image/C4E03AQEC4fvTNUKN_g/profile-displayphoto-shrink_800_800/0/1637410506170?e=1687392000&v=beta&t=xxSOdXY6aTnNdoMA9v5qDRk8iDLa_h68PXYep81D_j0" />
+                    </div>
+                    <p class="text-blk name">Abir Mondal</p>
+                    <p class="text-blk position">CEO</p>
+                    <p class="text-blk feature-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/abir-mondal-a18672206/" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/abirmondal" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-          </div>
+            <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+                <div class="card">
+                    <div class="team-image-wrapper">
+                        <img class="team-member-image"
+                            src="https://media.licdn.com/dms/image/C4D03AQFq7_k7AsPNJg/profile-displayphoto-shrink_800_800/0/1652583599297?e=1687392000&v=beta&t=GFBqg9lI43C1yYBvKs-Y4WHsYHfB-AvyNvhrJzpqUcY" />
+                    </div>
+                    <p class="text-blk name">Arnab Mukhopadhyay</p>
+                    <p class="text-blk position">CEO</p>
+                    <p class="text-blk feature-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/arnab-m-3a74b0164/" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Arnab-Mukhopadhyay-hash" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+                <div class="card">
+                    <div class="team-image-wrapper">
+                        <img class="team-member-image"
+                            src="https://media.licdn.com/dms/image/C4D03AQHg2nedXpU4BA/profile-displayphoto-shrink_800_800/0/1654691080704?e=1687392000&v=beta&t=D0Nakd9bS_-zkkWUnDFZyTLvGtjlJSnPXRnkgPwq6j8" />
+                    </div>
+                    <p class="text-blk name">Dipen Hore</p>
+                    <p class="text-blk position">CEO</p>
+                    <p class="text-blk feature-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/dipen-hore-96996b202/" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.facebook.com" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+                <div class="card">
+                    <div class="team-image-wrapper">
+                        <img class="team-member-image"
+                            src="https://media.licdn.com/dms/image/D4D03AQHvrLC3FNyj1w/profile-displayphoto-shrink_800_800/0/1681758281441?e=1687392000&v=beta&t=c9DvosXUc8FLTUZvF8s-7CEm-FwBA0Na6YrXKBIgETE" />
+                    </div>
+                    <p class="text-blk name">Debjoy Sarkar</p>
+                    <p class="text-blk position">CEO</p>
+                    <p class="text-blk feature-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/debjoy-sarkar-a37a8b272/" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.facebook.com" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+                <div class="card">
+                    <div class="team-image-wrapper">
+                        <img class="team-member-image"
+                            src="https://media.licdn.com/dms/image/D4D03AQFyK9HGpYrMiA/profile-displayphoto-shrink_800_800/0/1681644992265?e=1687392000&v=beta&t=cb9veVXQqJU9QdJcqHHgGesYlP5lx8xCZpNMfrJa1Q4" />
+                    </div>
+                    <p class="text-blk name">Somak Bose</p>
+                    <p class="text-blk position">CEO</p>
+                    <p class="text-blk feature-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/somak-bose-a00517271/" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/somakbose17" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div
-          class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container"
-        >
-          <div class="card">
-            <div class="team-image-wrapper">
-              <img
-                class="team-member-image"
-                src="https://media.licdn.com/dms/image/C4E03AQEC4fvTNUKN_g/profile-displayphoto-shrink_800_800/0/1637410506170?e=1687392000&v=beta&t=xxSOdXY6aTnNdoMA9v5qDRk8iDLa_h68PXYep81D_j0"
-              />
-            </div>
-            <p class="text-blk name">Abir Mondal</p>
-            <p class="text-blk position">CEO</p>
-            <p class="text-blk feature-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <div class="social-icons">
-              <a
-                href="https://www.linkedin.com/in/abir-mondal-a18672206/"
-                target="_blank"
-              >
-                <i class="fa-brands fa-linkedin"></i>
-              </a>
-              <a href="https://github.com/abirmondal" target="_blank">
-                <i class="fa-brands fa-github"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div
-          class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container"
-        >
-          <div class="card">
-            <div class="team-image-wrapper">
-              <img
-                class="team-member-image"
-                src="https://media.licdn.com/dms/image/C4D03AQFq7_k7AsPNJg/profile-displayphoto-shrink_800_800/0/1652583599297?e=1687392000&v=beta&t=GFBqg9lI43C1yYBvKs-Y4WHsYHfB-AvyNvhrJzpqUcY"
-              />
-            </div>
-            <p class="text-blk name">Arnab Mukhopadhyay</p>
-            <p class="text-blk position">CEO</p>
-            <p class="text-blk feature-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <div class="social-icons">
-              <a
-                href="https://www.linkedin.com/in/arnab-m-3a74b0164/"
-                target="_blank"
-              >
-                <i class="fa-brands fa-linkedin"></i>
-              </a>
-              <a
-                href="https://github.com/Arnab-Mukhopadhyay-hash"
-                target="_blank"
-              >
-                <i class="fa-brands fa-github"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div
-          class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container"
-        >
-          <div class="card">
-            <div class="team-image-wrapper">
-              <img
-                class="team-member-image"
-                src="https://media.licdn.com/dms/image/C4D03AQHg2nedXpU4BA/profile-displayphoto-shrink_800_800/0/1654691080704?e=1687392000&v=beta&t=D0Nakd9bS_-zkkWUnDFZyTLvGtjlJSnPXRnkgPwq6j8"
-              />
-            </div>
-            <p class="text-blk name">Dipen Hore</p>
-            <p class="text-blk position">CEO</p>
-            <p class="text-blk feature-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <div class="social-icons">
-              <a
-                href="https://www.linkedin.com/in/dipen-hore-96996b202/"
-                target="_blank"
-              >
-                <i class="fa-brands fa-linkedin"></i>
-              </a>
-              <a href="https://www.facebook.com" target="_blank">
-                <i class="fa-brands fa-github"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div
-          class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container"
-        >
-          <div class="card">
-            <div class="team-image-wrapper">
-              <img
-                class="team-member-image"
-                src="https://media.licdn.com/dms/image/D4D03AQHvrLC3FNyj1w/profile-displayphoto-shrink_800_800/0/1681758281441?e=1687392000&v=beta&t=c9DvosXUc8FLTUZvF8s-7CEm-FwBA0Na6YrXKBIgETE"
-              />
-            </div>
-            <p class="text-blk name">Debjoy Sarkar</p>
-            <p class="text-blk position">CEO</p>
-            <p class="text-blk feature-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <div class="social-icons">
-              <a
-                href="https://www.linkedin.com/in/debjoy-sarkar-a37a8b272/"
-                target="_blank"
-              >
-                <i class="fa-brands fa-linkedin"></i>
-              </a>
-              <a href="https://www.facebook.com" target="_blank">
-                <i class="fa-brands fa-github"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div
-          class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container"
-        >
-          <div class="card">
-            <div class="team-image-wrapper">
-              <img
-                class="team-member-image"
-                src="https://media.licdn.com/dms/image/D4D03AQFyK9HGpYrMiA/profile-displayphoto-shrink_800_800/0/1681644992265?e=1687392000&v=beta&t=cb9veVXQqJU9QdJcqHHgGesYlP5lx8xCZpNMfrJa1Q4"
-              />
-            </div>
-            <p class="text-blk name">Somak Bose</p>
-            <p class="text-blk position">CEO</p>
-            <p class="text-blk feature-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <div class="social-icons">
-              <a
-                href="https://www.linkedin.com/in/somak-bose-a00517271/"
-                target="_blank"
-              >
-                <i class="fa-brands fa-linkedin"></i>
-              </a>
-              <a href="https://github.com/somakbose17" target="_blank">
-                <i class="fa-brands fa-github"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  </body>
-<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 <script src="js/pageLoader.js"></script>
-<script>
-	$(document).ready(function(){
-		stopLoader();
-	});
-</script>
+<script src="js/about.js" type="module"></script>
 </html>

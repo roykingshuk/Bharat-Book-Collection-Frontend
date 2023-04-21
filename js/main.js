@@ -1,4 +1,4 @@
-import Cookies from '../vendor/jquery/js.cookie.min.mjs';
+import Cookies from 'https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/+esm';
 
 $(document).ready(function () {
     stopLoader();

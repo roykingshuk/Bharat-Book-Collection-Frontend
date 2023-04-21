@@ -1,4 +1,4 @@
-import Cookies from '../vendor/jquery/js.cookie.min.mjs';
+import Cookies from 'https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/+esm';
 
 $(document).ready(function () {
     var cookiesVal = Cookies.get();
@@ -35,8 +35,8 @@ $(document).ready(function () {
         data: { perPage: 12 },
         contentType: "applications/json",
         success: function (response) {
+        stopLoader();
         $.each(response, function (index, value) {
-            stopLoader();
             var bookTitle = value["Book-Title"];
             var img_url = value["Image-URL-L"];
             var rating = value["Average Ratings"].toFixed(2);
