@@ -2,56 +2,111 @@
 <html>
 
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Product Card/Page</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="css/bookdetails.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/png" href="images/icons/icon.png" />
+    <title>Book Details</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/bookdetails.css" />
+    <link rel="stylesheet" href="css/pageLoader.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 
 <body>
-  <section class="d-flex flex-container justify-content-center">
-    <div class="flex-child image">
-      <img src="" alt="" class="book-img rounded" id="bookImage" />
-    </div>
-    <div class="flex-child content shadow">
-      <h2 class="book-title">Book Title Here</h2>
-      <p class="book-details">Book Details Here</p>
-      <p class="book-rating">Book Rating Here</p>
-    </div>
-  </section>
-  <section class="book-recommendations">
-    <div class="header">
-      <h2 class="heading">Recommended Books</h2>
-    </div>
-    <div class="row row-cols-1 row-cols-md-5 g-4">
-    </div>
-
-
-    <template id="book-card">
-      <div class="col">
-        <div class="card h-100 shadow">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <a href="#" class="book-link"><h5 class="card-title">Card title</h5></a>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-              content. This content is a little bit longer.</p>
-          </div>
+    <div class="book-loader">
+        <div class="d-flex flex-column">
+            <div class="book">
+                <div class="book__pg-shadow"></div>
+                <div class="book__pg"></div>
+                <div class="book__pg book__pg--2"></div>
+                <div class="book__pg book__pg--3"></div>
+                <div class="book__pg book__pg--4"></div>
+                <div class="book__pg book__pg--5"></div>
+            </div>
         </div>
-      </div>
-    </template>
-  </section>
+    </div>
+    <div class="header">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand font-weight-bold text-capitalize" href="index.html">
+                    Bharat Book Collection
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">Contributors</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav mb-2 mb-lg-0 ms-auto d-none" id="userLog">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false"></a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#" id="logout">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button class="btn btn-outline-success d-none" onclick="window.location.href='signup.html';"
+                        style="width: 8rem; margin-right: 10px;" id="signupBtn">
+                        Sign Up
+                    </button>
+                    <button class="btn btn-outline-success d-none" onclick="window.location.href='login.html';"
+                        style="width: 8rem" id="loginBtn">
+                        Log In
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <section class="d-flex flex-container justify-content-center">
+        <div class="flex-child image">
+            <img src="" alt="" class="book-img rounded" id="bookImage" />
+        </div>
+        <div class="flex-child content shadow">
+            <h2 class="book-title">Book Title Here</h2>
+            <p class="book-details">Book Details Here</p>
+            <p class="book-rating">Book Rating Here</p>
+        </div>
+    </section>
+    <section class="book-recommendations">
+        <div class="header">
+            <h2 class="heading">Recommended Books</h2>
+        </div>
+        <div class="row row-cols-1 row-cols-md-5 g-4">
+        </div>
+
+
+        <template id="book-card">
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="#" class="book-link">
+                            <h5 class="card-title">Card title</h5>
+                        </a>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional
+                            content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </section>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-<script src="js/bookdetails.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
-  integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
-  integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/4085a96a69.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="js/pageLoader.js"></script>
+<script src="js/bookdetails.js" type="module"></script>
 
 </html>
