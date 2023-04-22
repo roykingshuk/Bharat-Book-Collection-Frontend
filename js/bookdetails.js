@@ -33,7 +33,7 @@ $(document).ready(function () {
     Object.keys(cookiesVal).forEach(function (key) {
       Cookies.remove(key);
     });
-    window.location.href = "index.html";
+    window.location.href = "dashboard.html";
   });
 
   $.ajax({
