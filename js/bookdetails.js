@@ -67,7 +67,8 @@ $(document).ready(function () {
       book_recommendation.forEach(function (ele) {
         let card = $($("#book-card").html());
         card.find(".card-img-top").attr("src", ele["Image-URL-L"]);
-        card.find(".card-title").text(ele["Book-Title"]);
+        card.find(".card-title>a").text(ele["Book-Title"]);
+        card.find(".card-title>a").attr("title", ele["Book-Title"]);
         card.find(".card-text").text(ele["Book-Author"]);
         card.find(".book-link").attr("href", "bookdetails.html?isbn=" + ele["ISBN"]);
 

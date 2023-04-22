@@ -46,6 +46,7 @@ $(document).ready(function () {
             $(cards).find(".card-img-top").attr("src", img_url);
             $(cards).find(".card-img-top").attr("alt", bookTitle + " cover");
             $(cards).find(".card-title>a").text(bookTitle);
+            $(cards).find(".card-title>a").attr("title", bookTitle);
             $(cards).find(".card-title>a").attr("href", "bookdetails.html?isbn="+value["ISBN"]);
             $(cards).find(".author").text(author);
             $(cards).find(".rating").text(rating);
