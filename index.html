@@ -71,33 +71,34 @@
     </div>
 
     <!-- Row 1 -->
-    <div class="container">
+    <div class="container pb-5">
         <div class="row grid" id="book-show">
             <div class="col-xs-1 col-md-3 col-lg-2 col-sm-6 p-2 d-flex align-items-stretch d-none book-cols">
-                <div class="card p-2">
+                <div class="card p-1 shadow">
                     <img src="" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title" data-isbn="">
-                            <a href="#">Card title</a>
+                            <a href="#" title="">Card title</a>
                         </h5>
                         <p class="card-text">
-                        <p class="author">Author</p>
-                        <span class="rating">Rating</span>
-                        <span class="rating-no">Number of Ratings</span>
+                            <p class="author">Author</p>
+                            <div class="position-absolute bottom-0">
+                                <span class="rating">Rating</span>
+                                <span class="rating-no">Number of Ratings</span>
+                            </div>
                         </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="js/pageLoader.js"></script>
+    <script src="js/index.js" type="module"></script>
 </body>
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-<script src="js/pageLoader.js"></script>
-<script src="js/index.js" type="module"></script>
-
 </html>
