@@ -1,11 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Roboto+Condensed:ital,wght@0,400;1,300&display=swap');
 
-/*
-*{
-        font-family: 'Playfair Display', serif;
+:root {
+    --star-size: -2em;
+    --star-color: #636060;
+    --star-background: #fc0;
+}
 
-    font-family: 'Roboto Condensed', sans-serif;
-}*/
+.stars {
+    --percent: calc(var(--rating)/10 * 100%);
+    display: inline-block;
+    font-size: var(--star-size);
+    font-family: Times;
+    line-height: 1;
+}
+
+.stars::before {
+    content: '⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐';
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 * {
     overflow: visible;
@@ -40,7 +56,6 @@
 }
 
 .image {
-    /* max-width: 478px; */
     margin-left: 1vw;
     margin-top: 10px;
 }
