@@ -49,7 +49,7 @@ $(document).ready(function () {
             $(cards).find(".card-title>a").attr("href", "bookdetails.html?isbn="+value["ISBN"]);
             $(cards).find(".author").text(author);
             $(cards).find(".rating").text(rating);
-            $(cards).find(".rating-no").text(noOfRatings);
+            $(cards).find(".rating-no").text("(" + noOfRatings + ")");
             $(cards).appendTo($("#book-show"));
             cards = $(colIdentify).clone();
         });
