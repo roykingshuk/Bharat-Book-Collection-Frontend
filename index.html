@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="icon" type="image/png" href="images/icons/icon.png" />
     <title>Bharat Book Collection</title>
@@ -38,9 +39,38 @@
             flex-grow: 1;
         }
 
+        nav ul {
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin-right: 25px;
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #fff;
+            color: #333;
+            transform: translateY(-5px);
+        }
+
         .welcome {
             margin-top: 8%;
-
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
@@ -65,7 +95,6 @@
         }
 
         .container {
-
             padding: 20px;
             position: relative;
             height: 100vh;
@@ -119,7 +148,7 @@
         .login-btn {
             background-color: #4CAF50;
             float: right;
-            margin-left: 999px;
+            margin-right: -430px;
             font-size: 20px;
             color: #fff;
             border: none;
@@ -143,7 +172,7 @@
             background-color: #4CAF50;
             float: right;
             font-size: 20px;
-            margin-left: 50px;
+            margin-right: auto;
             color: #fff;
             border: none;
             padding: 12px 20px;
@@ -163,10 +192,7 @@
         }
 
         .container2 {
-
-
             background-image: url("images/default-image.jpg");
-
             background-size: cover;
             background-attachment: fixed;
 
@@ -221,6 +247,10 @@
 <body>
     <header>
         <nav>
+            <ul>
+                <li><a href="dashboard.html">Home</a></li>
+                <li><a href="about.html">Contributors</a></li>
+            </ul>
             <div>
                 <button class="login-btn" onclick='window.location.href="signup.html"'>Sign Up</button>
             </div>
