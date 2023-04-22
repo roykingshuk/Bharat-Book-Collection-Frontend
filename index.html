@@ -1,104 +1,270 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="images/icons/icon.png" />
-    <!-- Bootstrap css -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
-    <link href="css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/pageLoader.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <title>Bharat Book Collection</title>
+	<title>My Webpage</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: Arial, sans-serif;
+		}
+
+		header {
+			background-color: #333;
+			color: #fff;
+			padding: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		nav {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			z-index: 1;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			flex-grow: 1;
+		}
+
+		
+   
+
+
+		.welcome {
+			margin-top : 8%;
+			
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			background-color: transparent;
+			opacity: 1;
+			padding: 50px;
+			text-align: center;
+			background-color: transparent;
+			color: #fff;
+
+			}
+		.welcome h1 
+			{
+			font-size: 36px;
+			font-weight: bold;
+			margin-bottom: 20px;
+			}
+		.welcome p 
+		{
+			font-size: 18px;
+			line-height: 1.5;
+		}
+
+		.container {
+			
+			padding: 20px;
+			position: relative;
+			height: 100vh;
+			overflow: hidden;
+			background-image: url('images/V.jpg');
+			background-size: cover;
+			background-attachment: fixed;
+		}
+			.container2 {
+			position: relative;
+			height: 100vh;
+			overflow: hidden;
+			background-color: #66BB6A
+			background-size: cover;
+			background-attachment: fixed;
+		}
+
+		.box {
+			position: absolute;
+			top: 70%;
+			right: 30%;
+			transform: translate(-80%, -90%);
+			padding: 20px;
+			text-align: center;
+		}
+
+		.box h1 {
+			font-size: 30px;
+			margin-bottom: 50px;		
+		}
+
+		.button {
+			display: inline-block;
+			color: #fff;
+			padding: 10px 20px;
+			font-size: 25px;
+			border-radius: 8px;
+			text-decoration: none;
+			background-color: #66BB6A;
+			x-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+			transition: all 0.3s ease;
+		}
+
+		.button:hover {
+			background-color: #37306B;
+			color: #fff;
+			transform: translateY(-5px);
+		}
+		.login-btn {
+			background-color: #4CAF50;
+			float: right;
+			margin-left: 999px;
+			font-size: 20px;
+			color: #fff;
+			border: none;
+			padding: 12px 20px;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: all 0.2s ease-in-out;
+			box-shadow: 0px 2px 5px rgba(0,0,0,0.25);
+			font-weight: bold;
+			font-style : none;
+		}
+		.login-btn:hover {
+			transform: scale(1.05);
+			box-shadow: 0px 2px 10px rgba(0,0,0,0.5);
+			background-color: #3E8E41;
+			color: #fff;
+		}
+		.signup {
+			background-color: #4CAF50;
+			float: right;
+			font-size: 20px;
+			margin-left: 50px;
+			color: #fff;
+			border: none;
+			padding: 12px 20px;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: all 0.2s ease-in-out;
+			box-shadow: 0px 2px 5px rgba(0,0,0,0.25);
+			font-weight: bold;
+		}
+		.signup:hover,.login-btn:hover  {
+			transform: scale(1.05);
+			box-shadow: 0px 2px 10px rgba(0,0,0,0.5);
+			background-color: #3E8E41;
+			color: #fff;
+		}
+.container2 {
+    
+
+	background-image: url("images/default-image.jpg");
+  
+	background-size: cover;
+	background-attachment: fixed;
+  
+    }
+	.head
+	{
+		display: flex;
+      justify-content: space-between;
+	    align-items: center;
+				
+		}
+
+    .boxc {
+      width: 300px;
+      height: 350px;
+      margin: 69px;
+      padding: 10px;
+	padding-top: 60px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      text-align: center;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .boxc:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    .boxc h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .boxc img {
+      width: 100px;
+      height: 100px;
+      border-radius: 0%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .boxc p {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #666;
+    }
+
+	</style>
 </head>
-
 <body>
-    <div class="book-loader">
-        <div class="d-flex flex-column">
-            <div class="book">
-                <div class="book__pg-shadow"></div>
-                <div class="book__pg"></div>
-                <div class="book__pg book__pg--2"></div>
-                <div class="book__pg book__pg--3"></div>
-                <div class="book__pg book__pg--4"></div>
-                <div class="book__pg book__pg--5"></div>
-            </div>
-        </div>
-    </div>
-    <div class="header">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand font-weight-bold text-capitalize" href="index.html">
-                    Bharat Book Collection
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">Contributors</a>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav mb-2 mb-lg-0 ms-auto d-none" id="userLog">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false"></a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#" id="logout">Logout</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <button class="btn btn-outline-success d-none" onclick="window.location.href='signup.html';"
-                        style="width: 8rem; margin-right: 10px;" id="signupBtn">
-                        Sign Up
-                    </button>
-                    <button class="btn btn-outline-success d-none" onclick="window.location.href='login.html';"
-                        style="width: 8rem" id="loginBtn">
-                        Log In
-                    </button>
-                </div>
-            </div>
-        </nav>
-    </div>
 
-    <!-- Row 1 -->
-    <div class="container pb-5">
-        <div class="row grid" id="book-show">
-            <div class="col-xs-1 col-md-3 col-lg-2 col-sm-6 p-2 d-flex align-items-stretch d-none book-cols">
-                <div class="card p-1 shadow">
-                    <img src="" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title" data-isbn="">
-                            <a href="#" title="">Card title</a>
-                        </h5>
-                        <p class="card-text">
-                            <p class="author">Author</p>
-                            <div class="position-absolute bottom-0">
-                                <span class="rating">Rating</span>
-                                <span class="rating-no">Number of Ratings</span>
-                            </div>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<header>
+		<nav>
+			
+			<div>
+			<button class="login-btn" onclick='window.location.href="signup.html"'>Sign Up</button></div>
+			<div>
+			<button class="signup" onclick='window.location.href="login.html"'>Log In</button></div>
 
-    <script src="js/pageLoader.js"></script>
-    <script src="js/index.js" type="module"></script>
-</body>
-</html>
+		</nav>
+	</header>
+
+	<div class="container">
+		<div class="welcome">
+	
+			<h1>Welcome to Bharat Book Collection</h1>
+			<p> literature lovers can come together to share their passion for the written word.
+
+				Our website is dedicated to providing a platform for book enthusiasts to discover new titles, read insightful reviews, and engage in thoughtful discussions about their favorite books.
+
+				Whether you're a fan of classic literature or the latest bestsellers, our website has something for everyone. We strive to create a welcoming community where readers can connect with each other and share their love of reading.
+			</p>
+		</div>
+		<div class="box">
+			
+			<a href="#features" class="button"> Explore </a>
+		</div>
+	</div>
+	<div class="container2" id = "features">
+	<h1 style = "text-align:center; padding-top : 100px;"> FEATURES </h1>
+	<div class ="head">
+    <div class="boxc">
+	<img src="images/icons/4827255.png" alt="Image 1">
+      <h2>EASY NAVIGATION</h2>
+      
+      <p> user friendly interfce and easy navigation</p>
+    </div>
+    <div class="boxc">
+	<img src="images/icons/1671151.png" alt="Image 2">
+      <h2>DIVERSE COLLECTION</h2>
+      
+      <p>A vast array of collections can be found in various category. More than over 10k collections </p>
+    </div>
+    <div class="boxc">
+	<img src="images/icons/6114332.png" alt="Image 3">
+      <h2>AI RECOMMENDATION</h2>
+      
+      <p>Ai Based book recommendation base your choice and reviews</p>
+    </div>
+  </div>
+</div>
+	</body>
+	</html>
