@@ -1,5 +1,8 @@
 import Cookies from 'https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/+esm';
 
+var cards, colIdentify;
+var pageCount = 7;
+
 $(document).ready(function () {
     var cookiesVal = Cookies.get();
     if (JSON.stringify(cookiesVal) !== "{}") {
@@ -13,13 +16,7 @@ $(document).ready(function () {
     } else {
         $('#signupBtn, #loginBtn').removeClass('d-none');
         $('#userLog').remove();
-    }
-
-    var colIdentify = ".book-cols:first";
-    var cards = $(colIdentify).clone();
-    $(cards).removeClass('d-none');
-    $(colIdentify).remove();
-    
+    }    
     
     $('#logout').click(function(e){
         e.preventDefault();
@@ -29,10 +26,59 @@ $(document).ready(function () {
         window.location.href = "index.html";
     });
 
-    $.ajax({
+    $('.pagination').append(`
+        <li class="page-item" id="prevBtn">
+            <a class="page-link" href="#">&laquo;</a>
+        </li>
+    `);
+    for (let i = 1; i <= pageCount; i++) {
+        $('.pagination').append(`
+            <li class="page-item page-no">
+                <a class="page-link" href="#">${i}</a>
+            </li>
+        `);
+    }
+    $('.pagination').append(`
+        <li class="page-item" id="nextBtn">
+            <a class="page-link" href="#">&raquo;</a>
+        </li>
+    `);
+
+    $('.page-no:nth-child(2)').addClass("active");
+
+    $("#prevBtn").on("click", function(e) {
+        e.preventDefault();
+        if ($('.active').prev().is('.page-no:not(:nth-child(1))')) {
+            $('.active').removeClass('active').prev().addClass('active');
+            loadBooks(getCurrentPage());
+        }
+    });
+    $("#nextBtn").on("click", function(e) {
+        e.preventDefault();
+        if ($('.active').next().is('.page-no:not(:last-child)')) {
+            $('.active').removeClass('active').next().addClass('active');
+            loadBooks(getCurrentPage());
+        }
+    });
+    $(".page-no").on("click", function(e) {
+        e.preventDefault();
+        $('.active').removeClass("active");
+        $(this).addClass("active");
+        loadBooks(getCurrentPage());
+    });
+
+    loadBooks(1);
+});
+
+function loadBooks(pageNo) {
+    colIdentify = ".book-cols:first";
+    cards = $(colIdentify).clone();
+    $(cards).removeClass('d-none');
+    $('.book-cols').remove();
+    jQuery.ajax({
         url: "https://bbc-backend.onrender.com/get-top-books/",
         type: "GET",
-        data: { perPage: 12 },
+        data: { page: pageNo, perPage: 12 },
         contentType: "applications/json",
         success: function (response) {
         stopLoader();
@@ -63,4 +109,8 @@ $(document).ready(function () {
         });
     },
   });
-});
+}
+
+function getCurrentPage() {
+    return $('.active').text();
+}
