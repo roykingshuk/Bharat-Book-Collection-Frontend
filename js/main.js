@@ -54,7 +54,7 @@ $(document).ready(function () {
                 Object.keys(result).forEach(function(key) {
                     Cookies.set(key, result[key]);
                 });
-                window.location.href = "index.html";
+                window.location.href = "dashboard.html";
             },
             error: function(response) {
                 $("#login-btn").text("Login");
