@@ -1,270 +1,272 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My Webpage</title>
-	<style>
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		}
+    <link rel="icon" type="image/png" href="images/icons/icon.png" />
+    <title>Bharat Book Collection</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-		body {
-			font-family: Arial, sans-serif;
-		}
+        body {
+            font-family: Arial, sans-serif;
+        }
 
-		header {
-			background-color: #333;
-			color: #fff;
-			padding: 20px;
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-		}
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-		nav {
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			background-color: #333;
-			color: #fff;
-			padding: 10px;
-			z-index: 1;
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			flex-grow: 1;
-		}
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
 
-		
-   
+        .welcome {
+            margin-top: 8%;
+
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: transparent;
+            opacity: 1;
+            padding: 50px;
+            text-align: center;
+            background-color: transparent;
+            color: #fff;
+
+        }
+
+        .welcome h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .welcome p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .container {
+
+            padding: 20px;
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            background-image: url('images/V.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .container2 {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #66BB6A;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .box {
+            position: absolute;
+            top: 70%;
+            right: 30%;
+            transform: translate(-80%, -90%);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .box h1 {
+            font-size: 30px;
+            margin-bottom: 50px;
+        }
+
+        .button {
+            display: inline-block;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            background-color: #66BB6A;
+            x-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #37306B;
+            color: #fff;
+            transform: translateY(-5px);
+        }
+
+        .login-btn {
+            background-color: #4CAF50;
+            float: right;
+            margin-left: 999px;
+            font-size: 20px;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+            font-weight: bold;
+            font-style: none;
+        }
+
+        .login-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+            background-color: #3E8E41;
+            color: #fff;
+        }
+
+        .signup {
+            background-color: #4CAF50;
+            float: right;
+            font-size: 20px;
+            margin-left: 50px;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+            font-weight: bold;
+        }
+
+        .signup:hover,
+        .login-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+            background-color: #3E8E41;
+            color: #fff;
+        }
+
+        .container2 {
 
 
-		.welcome {
-			margin-top : 8%;
-			
-			background-repeat: no-repeat;
-			background-size: cover;
-			background-position: center;
-			background-color: transparent;
-			opacity: 1;
-			padding: 50px;
-			text-align: center;
-			background-color: transparent;
-			color: #fff;
+            background-image: url("images/default-image.jpg");
 
-			}
-		.welcome h1 
-			{
-			font-size: 36px;
-			font-weight: bold;
-			margin-bottom: 20px;
-			}
-		.welcome p 
-		{
-			font-size: 18px;
-			line-height: 1.5;
-		}
+            background-size: cover;
+            background-attachment: fixed;
 
-		.container {
-			
-			padding: 20px;
-			position: relative;
-			height: 100vh;
-			overflow: hidden;
-			background-image: url('images/V.jpg');
-			background-size: cover;
-			background-attachment: fixed;
-		}
-			.container2 {
-			position: relative;
-			height: 100vh;
-			overflow: hidden;
-			background-color: #66BB6A
-			background-size: cover;
-			background-attachment: fixed;
-		}
+        }
 
-		.box {
-			position: absolute;
-			top: 70%;
-			right: 30%;
-			transform: translate(-80%, -90%);
-			padding: 20px;
-			text-align: center;
-		}
+        .head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
-		.box h1 {
-			font-size: 30px;
-			margin-bottom: 50px;		
-		}
+        }
 
-		.button {
-			display: inline-block;
-			color: #fff;
-			padding: 10px 20px;
-			font-size: 25px;
-			border-radius: 8px;
-			text-decoration: none;
-			background-color: #66BB6A;
-			x-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-			transition: all 0.3s ease;
-		}
+        .boxc {
+            width: 300px;
+            height: 350px;
+            margin: 69px;
+            padding: 10px;
+            padding-top: 60px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+        }
 
-		.button:hover {
-			background-color: #37306B;
-			color: #fff;
-			transform: translateY(-5px);
-		}
-		.login-btn {
-			background-color: #4CAF50;
-			float: right;
-			margin-left: 999px;
-			font-size: 20px;
-			color: #fff;
-			border: none;
-			padding: 12px 20px;
-			border-radius: 5px;
-			cursor: pointer;
-			transition: all 0.2s ease-in-out;
-			box-shadow: 0px 2px 5px rgba(0,0,0,0.25);
-			font-weight: bold;
-			font-style : none;
-		}
-		.login-btn:hover {
-			transform: scale(1.05);
-			box-shadow: 0px 2px 10px rgba(0,0,0,0.5);
-			background-color: #3E8E41;
-			color: #fff;
-		}
-		.signup {
-			background-color: #4CAF50;
-			float: right;
-			font-size: 20px;
-			margin-left: 50px;
-			color: #fff;
-			border: none;
-			padding: 12px 20px;
-			border-radius: 5px;
-			cursor: pointer;
-			transition: all 0.2s ease-in-out;
-			box-shadow: 0px 2px 5px rgba(0,0,0,0.25);
-			font-weight: bold;
-		}
-		.signup:hover,.login-btn:hover  {
-			transform: scale(1.05);
-			box-shadow: 0px 2px 10px rgba(0,0,0,0.5);
-			background-color: #3E8E41;
-			color: #fff;
-		}
-.container2 {
-    
+        .boxc:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
 
-	background-image: url("images/default-image.jpg");
-  
-	background-size: cover;
-	background-attachment: fixed;
-  
-    }
-	.head
-	{
-		display: flex;
-      justify-content: space-between;
-	    align-items: center;
-				
-		}
+        .boxc h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
 
-    .boxc {
-      width: 300px;
-      height: 350px;
-      margin: 69px;
-      padding: 10px;
-	padding-top: 60px;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-      text-align: center;
-      transition: all 0.3s ease-in-out;
-    }
+        .boxc img {
+            width: 100px;
+            height: 100px;
+            border-radius: 0%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
 
-    .boxc:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-    }
-
-    .boxc h2 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-
-    .boxc img {
-      width: 100px;
-      height: 100px;
-      border-radius: 0%;
-      object-fit: cover;
-      margin-bottom: 10px;
-    }
-
-    .boxc p {
-      font-size: 16px;
-      line-height: 1.5;
-      color: #666;
-    }
-
-	</style>
+        .boxc p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #666;
+        }
+    </style>
 </head>
+
 <body>
+    <header>
+        <nav>
+            <div>
+                <button class="login-btn" onclick='window.location.href="signup.html"'>Sign Up</button>
+            </div>
+            <div>
+                <button class="signup" onclick='window.location.href="login.html"'>Log In</button>
+            </div>
 
-	<header>
-		<nav>
-			
-			<div>
-			<button class="login-btn" onclick='window.location.href="signup.html"'>Sign Up</button></div>
-			<div>
-			<button class="signup" onclick='window.location.href="login.html"'>Log In</button></div>
+        </nav>
+    </header>
 
-		</nav>
-	</header>
+    <div class="container">
+        <div class="welcome">
+            <h1>Welcome to Bharat Book Collection</h1>
+            <p>Literature lovers can come together to share their passion for the written word. Our website is dedicated
+                to providing a platform for book enthusiasts to discover new titles, read insightful reviews, and engage
+                in thoughtful discussions about their favorite books.
+                Whether you're a fan of classic literature or the latest bestsellers, our website has something for
+                everyone. We strive to create a welcoming community where readers can connect with each other and share
+                their love of reading.
+            </p>
+        </div>
+        <div class="box">
 
-	<div class="container">
-		<div class="welcome">
-	
-			<h1>Welcome to Bharat Book Collection</h1>
-			<p> literature lovers can come together to share their passion for the written word.
-
-				Our website is dedicated to providing a platform for book enthusiasts to discover new titles, read insightful reviews, and engage in thoughtful discussions about their favorite books.
-
-				Whether you're a fan of classic literature or the latest bestsellers, our website has something for everyone. We strive to create a welcoming community where readers can connect with each other and share their love of reading.
-			</p>
-		</div>
-		<div class="box">
-			
-			<a href="#features" class="button"> Explore </a>
-		</div>
-	</div>
-	<div class="container2" id = "features">
-	<h1 style = "text-align:center; padding-top : 100px;"> FEATURES </h1>
-	<div class ="head">
-    <div class="boxc">
-	<img src="images/icons/4827255.png" alt="Image 1">
-      <h2>EASY NAVIGATION</h2>
-      
-      <p> user friendly interfce and easy navigation</p>
+            <a href="#features" class="button"> Explore </a>
+        </div>
     </div>
-    <div class="boxc">
-	<img src="images/icons/1671151.png" alt="Image 2">
-      <h2>DIVERSE COLLECTION</h2>
-      
-      <p>A vast array of collections can be found in various category. More than over 10k collections </p>
+    <div class="container2" id="features">
+        <h1 style="text-align:center; padding-top : 100px;"> FEATURES </h1>
+        <div class="head">
+            <div class="boxc">
+                <img src="images/icons/4827255.png" alt="Image 1">
+                <h2>EASY NAVIGATION</h2>
+                <p>User Friendly Interface and Easy Navigation</p>
+            </div>
+            <div class="boxc">
+                <img src="images/icons/1671151.png" alt="Image 2">
+                <h2>DIVERSE COLLECTION</h2>
+                <p>A vast array of collections can be found in various category. More than over 10k collections </p>
+            </div>
+            <div class="boxc">
+                <img src="images/icons/6114332.png" alt="Image 3">
+                <h2>AI RECOMMENDATION</h2>
+                <p>AI Based Book Recommendations based on your choices and ratings</p>
+            </div>
+        </div>
     </div>
-    <div class="boxc">
-	<img src="images/icons/6114332.png" alt="Image 3">
-      <h2>AI RECOMMENDATION</h2>
-      
-      <p>Ai Based book recommendation base your choice and reviews</p>
-    </div>
-  </div>
-</div>
-	</body>
-	</html>
+</body>
+
+</html>
